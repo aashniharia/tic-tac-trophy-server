@@ -1,0 +1,22 @@
+{
+  "name": "tic-tac-trophy-server",
+  "version": "1.0.0",
+  "description": "tic-tac-toe-multiplayer-server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "websocket.io"
+  ],
+  "author": "Aashni Haria",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}
