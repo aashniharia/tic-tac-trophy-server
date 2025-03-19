@@ -1,11 +1,18 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const http = require("http");
 const app = express();
 const { Server } = require("socket.io");
 
 dotenv.config();
-
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://tic-tac-trophy.netlify.app/"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
