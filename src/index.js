@@ -5,6 +5,11 @@ const app = express();
 const { Server } = require("socket.io");
 
 dotenv.config();
+
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
